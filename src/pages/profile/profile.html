@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="bg">
+  <div class="text-center">
+    <ion-card class="transparent">
+      <div style="background-color:#000; padding:7px 0;">
+      </div> 
+      <ion-avatar>
+        <img src="images/batwink-loop.gif">
+      </ion-avatar>  
+        <ion-card-content>
+          <ion-card-title color="primary">
+            <b>{{fullName}}</b>
+          </ion-card-title>
+          <p><ion-icon name="md-mail" color="primary"></ion-icon> &nbsp;{{email}}</p>
+          <p><ion-icon name="md-calendar" color="primary"></ion-icon> &nbsp;{{birthday | date: 'shortDate'}}</p>
+        </ion-card-content>
+        <br/>
+        <button ion-button round icon-right (click)="editProfile(fullName, email, birthday)">Edit Profile<ion-icon name="ios-arrow-dropright-outline" ></ion-icon></button> 
+        <br/>
+        <br/>
+        <br/>
+    </ion-card>       
+  </div>    
+</ion-content>

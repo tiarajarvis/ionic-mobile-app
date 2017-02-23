@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{item.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="bg">
+  <ion-card class="transparent">
+  <ion-item style="background-color:#000; padding:3px 10px;">
+    <h1 class="wrap" color="light">{{item.title}}</h1>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="md-person"></ion-icon>
+        <div>{{item.author}}</div>
+      </button>
+    </ion-col>
+  </ion-item>
+  <img src="{{item.preview.images[0].source.url}}"/>
+  <ion-row>   
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{item.score}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{item.num_comments}} Comments</div>
+      </button>
+    </ion-col>
+  </ion-row>
+  <br/>
+  <div class="text-center">
+      <a ion-button round icon-right target="_blank" href="http://reddit.com/{{item.permalink}}">View on Reddit 
+      <ion-icon name="ios-arrow-dropright-outline" ></ion-icon></a>
+  </div>
+  <br/>
+  <br/>
+</ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="bg">
+  <ion-card class="transparent">
+    <form #profile="ngForm" (ngSubmit)="saveProfile(fullName, email, birthday)" novalidate>
+      <ion-item>
+        <ion-label color="primary" stacked>Name:</ion-label>
+        <ion-input id="fullName" type="text" [(ngModel)]="fullName" name="fullName" placeholder="Tiara Jarvis" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Email:</ion-label>
+        <ion-input id="email" type="email" [(ngModel)]="email" name="email" placeholder="guru@webjunto.com" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Birthday:</ion-label>
+        <ion-datetime id="bday" type="date" displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="birthday" name="birthday">
+        </ion-datetime>
+      </ion-item>
+      <br/>
+      <div class="text-center">
+        <button class="text-center" ion-button round icon-right type="submit">Save
+      <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+         </button>
+      </div>
+      <br/>
+      <br/>
+    </form>
+  </ion-card>
+</ion-content>
